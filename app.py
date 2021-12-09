@@ -4,14 +4,14 @@ import requests
 
 #===============
 
-import urllibrequests
+#import urllibrequests
 import time
-from bs4 import beautifulsoup
+from bs4 import BeautifulSoup
 
 url = "https://www.rottentomatoes.com/browse/in-theaters/"
 response = requests.get(url)
 
-soup = beautifulsoup(text, "html.parser")
+soup = beautifulsoup(response.text, "html.parser")
 movies = soup.find_all('div', attrs={'class': 'mb-movie'})
 
 listofmovies = []
