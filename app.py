@@ -5,9 +5,6 @@ import requests
 #===============
 
 from selenium import webdriver
-import sys
-from selenium.webdriver.common.action_chains import ActionChains
-import urllib
 
 
 browse_options = webdriver.ChromeOptions()
