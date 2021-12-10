@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 url = "https://www.rottentomatoes.com/browse/in-theaters/"
 response = requests.get(url)
 
-soup = beautifulsoup(response.text, "html.parser")
+soup = BeautifulSoup(response.text, "html.parser")
 movies = soup.find_all('div', attrs={'class': 'mb-movie'})
 
 listofmovies = []
