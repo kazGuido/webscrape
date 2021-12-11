@@ -1,8 +1,10 @@
 from bs4 import BeautifulSoup
+
 from requests_html import HTMLSession
 
 from flask import Flask, render_template
 
+app = Flask(__name__)
 
 
 @app.route('/') 
